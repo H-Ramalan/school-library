@@ -29,7 +29,7 @@ class App
     puts 'Age: '
     age = gets.chomp.to_i
     puts 'Name: '
-    name = gets.chomp.to_i
+    name = gets.chomp
     puts 'Has parent permission? [Y/N]: '
     parent_permission = gets.chomp
     person = Student.new(age, parent_permission, name: name)
@@ -56,7 +56,7 @@ class App
     author = gets.chomp
     book = Book.new(title, author)
     @books.push(book)
-    puts 'Book successfully added'
+    puts 'Book successfully created'
   end
 
   def create_rental
