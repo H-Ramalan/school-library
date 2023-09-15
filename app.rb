@@ -189,26 +189,25 @@ class App
   def save_rentals
     return unless @rentals.any?
 
-    existing_rentals = ReadFile.new('rentals.json').read || []
-    existing_rentals += @rentals.map do |rental|
+    ReadFile.new('rentals.json').read || ([] + @rentals.map do |rental|
       {
         date: rental.date,
         book: { title: rental.book.title, author: rental.book.author },
         person: { type: rental.person.class.to_s, id: rental.person.id, age: rental.person.age,
                   name: rental.person.name }
       }
-    end
+    end)
     WriteFile.new('rentals.json').write(rentals_data)
   end
 
   def save_people
     return unless @people.any?
 
-    teachers_data = @people.select { |person| person.is_a?(Teacher) }.map do |teacher|
+    @people.select { |person| person.is_a?(Teacher) }.map do |teacher|
       { type: 'teacher', id: teacher.id, age: teacher.age, name: teacher.name, specialization: teacher.specialization }
     end
 
-    students_data = @people.select { |person| person.is_a?(Student) }.map do |student|
+    @people.select { |person| person.is_a?(Student) }.map do |student|
       { type: 'student', age: student.age, id: student.id, name: student.name }
     end
   end
