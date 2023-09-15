@@ -1,0 +1,28 @@
+[
+  {
+    "type": "student",
+    "id": 235,
+    "age": 21,
+    "name": "Ryu"
+  },
+  {
+    "type": "teacher",
+    "id": 196,
+    "age": 32,
+    "name": "Luigi",
+    "specialization": "Maths"
+  },
+  {
+    "type": "student",
+    "id": 287,
+    "age": 24,
+    "name": "Mario"
+  },
+  {
+    "type": "teacher",
+    "id": 238,
+    "age": 42,
+    "name": "John",
+    "specialization": "History"
+  }
+]

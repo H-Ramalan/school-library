@@ -1,8 +1,10 @@
+require 'json'
 require_relative 'app'
 require_relative 'enteries'
 app = App.new
 
 def main(app)
+  app.load_data
   puts 'Welcome to School Library App!'
   loop do
     puts 'Please select an option by entering a number: '
@@ -17,8 +19,18 @@ def main(app)
     number = gets.chomp.to_i
     break if number == 7
 
-    enteries(app, number)
+    if number == 6
+      puts 'Please enter ID of person'
+      person_id = gets.chomp.to_i
+      app.list_rentals(person_id)
+    else
+      enteries(app, number)
+    end
   end
+end
+
+at_exit do
+  app.save_data
 end
 
 main(app)
