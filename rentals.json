@@ -38,5 +38,31 @@
       "age": 24,
       "name": "Mario"
     }
+  },
+  {
+    "date": "2021-11-09",
+    "book": {
+      "title": "truy",
+      "author": "myself"
+    },
+    "person": {
+      "type": "Student",
+      "id": 287,
+      "age": 24,
+      "name": "Mario"
+    }
+  },
+  {
+    "date": "2021-11-09",
+    "book": {
+      "title": "truy",
+      "author": "myself"
+    },
+    "person": {
+      "type": "Student",
+      "id": 287,
+      "age": 24,
+      "name": "Mario"
+    }
   }
 ]

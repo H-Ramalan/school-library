@@ -99,8 +99,8 @@ class App
   end
 
   def select_book
-    puts 'Select book ffrom the number: '
-    list_people
+    puts 'Select book from the number: '
+    list_books
     gets.chomp.to_i
   end
 
@@ -123,17 +123,6 @@ class App
     end
   end
 
-  # def list_rentals
-  #   if @rentals.empty?
-  #     puts 'There are no rentals to show'
-  #   else
-  #     puts 'ID of person: '
-  #     person_id = gets.chomp.to_i
-  #     puts 'Rentals: '
-  #     @rentals.each do |rental|
-  #       if person_id == rental.person.id
-  #         puts "Date: #{rental.date}, Book '#{rental.book.title}' by #{rental.book.author}"
-  #       end
   def load_data
     load_books
     load_people
@@ -189,14 +178,15 @@ class App
   def save_rentals
     return unless @rentals.any?
 
-    ReadFile.new('rentals.json').read || ([] + @rentals.map do |rental|
+    existing_rentals = ReadFile.new('rentals.json').read || []
+    rentals_data = existing_rentals + @rentals.map do |rental|
       {
         date: rental.date,
         book: { title: rental.book.title, author: rental.book.author },
         person: { type: rental.person.class.to_s, id: rental.person.id, age: rental.person.age,
                   name: rental.person.name }
       }
-    end)
+    end
     WriteFile.new('rentals.json').write(rentals_data)
   end
 
