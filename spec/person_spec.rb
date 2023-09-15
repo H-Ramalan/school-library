@@ -36,14 +36,11 @@ describe Person do
   end
 
   it 'correctly returns the name' do
-   
     expect(person.correct_name).to eq('John')
   end
 
   it 'does not correct the name' do
-    
     person_with_long_name = Person.new(30, 'alongnameiscorrected')
     expect(person_with_long_name.correct_name).to eq('alongnameiscorrected')
   end
-
 end

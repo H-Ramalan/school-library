@@ -10,12 +10,12 @@ describe Classroom do
       expect(classroom.label).to eq('Class')
     end
 
-    it 'initializes a classroom object with empty students array' do 
+    it 'initializes a classroom object with empty students array' do
       expect(classroom.students).to be_empty
-    end 
+    end
   end
 
-  describe '#add_student' do 
+  describe '#add_student' do
     it 'makes the classroom of the added student to the current classroom' do
       expect(student).to receive(:classroom=).with(classroom)
       classroom.add_student(student)

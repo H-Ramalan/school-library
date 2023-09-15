@@ -3,7 +3,7 @@ require_relative '../teacher'
 require_relative '../person'
 
 describe Teacher do
-  let (:teacher) { Teacher.new(35, 'Maths', parent_permission: true) }
+  let(:teacher) { Teacher.new(35, 'Maths', parent_permission: true) }
   it 'initializes with name, age, specialization and parent_permission' do
     expect(teacher.age).to eq(35)
     expect(teacher.specialization).to eq('Maths')

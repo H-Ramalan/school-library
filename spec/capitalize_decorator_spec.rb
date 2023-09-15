@@ -3,8 +3,8 @@ require_relative '../decorator'
 require_relative '../capitalize_decorator'
 
 describe CapitalizeDecorator do
-  let (:base_decorator) { double('BaseDecorator') }
-  let (:capitalize_decorator) { CapitalizeDecorator.new(base_decorator) }
+  let(:base_decorator) { double('BaseDecorator') }
+  let(:capitalize_decorator) { CapitalizeDecorator.new(base_decorator) }
 
   describe '#correct_name' do
     it 'capitalizes correct name returned by base decorator' do
