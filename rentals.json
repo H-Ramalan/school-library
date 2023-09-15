@@ -1,0 +1,68 @@
+[
+  {
+    "date": "2022-11-09",
+    "book": {
+      "title": "My Life",
+      "author": "Rodney Moore"
+    },
+    "person": {
+      "type": "student",
+      "id": 235,
+      "age": 21,
+      "name": "Ryu"
+    }
+  },
+  {
+    "date": "2023-12-12",
+    "book": {
+      "title": "Her New Life",
+      "author": "Moses Rich"
+    },
+    "person": {
+      "type": "Teacher",
+      "id": 196,
+      "age": 32,
+      "name": "Luigi",
+      "specialization": "Maths"
+    }
+  },
+  {
+    "date": "2020-10-12",
+    "book": {
+      "title": "Rainy Days",
+      "author": "Howdy Piper"
+    },
+    "person": {
+      "type": "student",
+      "id": 287,
+      "age": 24,
+      "name": "Mario"
+    }
+  },
+  {
+    "date": "2021-11-09",
+    "book": {
+      "title": "truy",
+      "author": "myself"
+    },
+    "person": {
+      "type": "Student",
+      "id": 287,
+      "age": 24,
+      "name": "Mario"
+    }
+  },
+  {
+    "date": "2021-11-09",
+    "book": {
+      "title": "truy",
+      "author": "myself"
+    },
+    "person": {
+      "type": "Student",
+      "id": 287,
+      "age": 24,
+      "name": "Mario"
+    }
+  }
+]
