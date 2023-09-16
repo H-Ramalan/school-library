@@ -40,7 +40,13 @@ describe Person do
   end
 
   it 'does not correct the name' do
-    person_with_long_name = Person.new(30, 'alongnameiscorrected')
-    expect(person_with_long_name.correct_name).to eq('alongnameiscorrected')
+    person_with_long_name = Person.new(30, 'JohnMillerTony')
+    expect(person_with_long_name.correct_name).to eq('JohnMillerTony')
+  end
+
+  it 'can add a rental and return it' do
+    rental = double('Rental')
+    expect(person.add_rental(rental)).to eq([rental])
+    expect(person.rentals).to include(rental)
   end
 end
